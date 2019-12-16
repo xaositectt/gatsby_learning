@@ -33,7 +33,7 @@ const Username = styled.h2`
 const User = props => (
   <>
     <Avatar src={props.avatar} alt={props.username} />
-    <Username>{props.username}</Username>
+    <Username className="lovely-fabulous">{props.username}</Username>
   </>
 )
 
