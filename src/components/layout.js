@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import SEO from "./seo"
-import NavBar from './nav_bar'
+import NavBar from 'components/nav_bar'
 
 export default ({ children }) => (
   <div style={{ margin: `3rem auto`, maxWidth: '80%', padding: `0 1rem` }}>

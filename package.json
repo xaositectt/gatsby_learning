@@ -32,6 +32,8 @@
     "typography-theme-fairy-gates": "^0.16.19"
   },
   "devDependencies": {
+    "gatsby-plugin-webpack-bundle-analyzer": "^1.0.5",
+    "gatsby-plugin-root-import": "^2.0.5",
     "prettier": "^1.19.1"
   },
   "repository": {
