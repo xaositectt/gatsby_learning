@@ -27,5 +27,9 @@ module.exports = {
     { resolve: `gatsby-source-filesystem`, options: { path: `./src/images/avatars` } },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-  ],
+    {
+      resolve: `gatsby-plugin-create-client-paths`,
+      options: { prefixes: [`/app/*`] },
+    }
+  ]
 }
