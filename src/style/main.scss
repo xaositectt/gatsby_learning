@@ -1,4 +1,10 @@
-html {
-  background-color: white;
+@tailwind base;
 
+@tailwind components;
+
+@tailwind utilities;
+
+html {
+  background-color: #fff4ed;
+  color: black;
 }

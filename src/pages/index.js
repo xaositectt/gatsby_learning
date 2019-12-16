@@ -14,7 +14,7 @@ export default () => (
         </>
       ) : (
         <>
-          You should <Link to="/app/login">log in</Link> to see restricted
+          You should <Link to="/app/login" className="text-2xl" style={{color: 'blue'}}>log in</Link> to see restricted
           content
         </>
       )}

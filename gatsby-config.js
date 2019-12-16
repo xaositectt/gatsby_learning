@@ -7,12 +7,12 @@ module.exports = {
     author: `xaositectt`,
   },
   plugins: [
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography`
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-typography`,
+    //   options: {
+    //     pathToConfigModule: `src/utils/typography`
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -46,6 +46,11 @@ module.exports = {
         components: path.join(__dirname, 'src/components')
       }
     },
-    'gatsby-plugin-sass'
+    {
+      resolve: 'gatsby-plugin-sass',
+      options: {
+        postCssPlugins:  [require('tailwindcss')]
+      }
+    }
   ],
 }
