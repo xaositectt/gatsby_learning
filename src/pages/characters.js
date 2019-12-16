@@ -38,14 +38,17 @@ const User = props => (
 )
 
 export default ({data}) => {
-  const queriedImages = data.allFile.edges.map(node => node.node.childImageSharp.fluid)
+  const smallQueriedImages = data.small_avatars.edges.map(node => node.node.childImageSharp.fluid)
+  const largeQueriedImages = data.large_avatars.edges.map(node => node.node.childImageSharp.fluid)
 
-  console.log(queriedImages)
+  console.log(smallQueriedImages)
+  console.log(largeQueriedImages)
 
   return (
     <Layout>
       <h1>Characters</h1>
-      <ImageList images={queriedImages}/>
+      <ImageList images={smallQueriedImages}/>
+      <ImageList images={largeQueriedImages}/>
 
       <Container>
         <h1>About Styled Components</h1>
@@ -66,16 +69,28 @@ export default ({data}) => {
 
 export const query = graphql`
   query {
-    allFile(filter: {name: {regex: "/^[0-9]+$/"}}) {
+    small_avatars: allFile(filter: {name: {regex: "/^[0-9]+$/"}}) {
       edges {
         node {
           childImageSharp {
-            fluid(maxWidth: 150, maxHeight: 150) {
+            fluid(maxWidth: 10, maxHeight: 10) {
               ...GatsbyImageSharpFluid
             }
           }
         }
       }
     }
+    large_avatars: allFile(filter: {name: {regex: "/^[0-9]+$/"}}) {
+      edges {
+        node {
+          childImageSharp {
+            fluid(maxWidth: 250, maxHeight: 250) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
+
   }
 `

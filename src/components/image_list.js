@@ -6,7 +6,7 @@ const imageList = ({images}) => {
   return (
     <div style={{ display: 'flex'}}>
       {images.map((image, i) => {
-        return <Img key={i} fluid={{...image, aspectRatio: 21 / 9}} style={{ width: 200, marginRight: 10 }}/>
+        return <Img key={i} fluid={{...image, aspectRatio: 21 / 10}} style={{ width: 250, marginRight: 10, marginBottom: 10 }}/>
       })}
     </div>
   )
