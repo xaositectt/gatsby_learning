@@ -5,6 +5,7 @@ module.exports = {
     title: `Images`,
     description: `A website testing the gatsby images`,
     author: `xaositectt`,
+    siteUrl: `https://www.images.com`
   },
   plugins: [
     // {
@@ -58,5 +59,6 @@ module.exports = {
         // Add any options here
       },
     },
+    `gatsby-plugin-sitemap`
   ],
 }
