@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import styled from "styled-components"
 import Layout from "../components/layout"
 import ImageList from "../components/image_list"
+import Annah from 'assets/annah.png'
 
 const Container = styled.div`
   margin: 3rem auto;
@@ -60,6 +61,10 @@ export default ({data}) => {
         <User
           username="Bob Smith"
           avatar="https://s3.amazonaws.com/uifaces/faces/twitter/vladarbatov/128.jpg"
+        />
+        <User
+          username="Annah"
+          avatar={Annah}
         />
       </Container>
 
