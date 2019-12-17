@@ -44,6 +44,7 @@ export default ({data}) => {
 
   console.log(smallQueriedImages)
   console.log(largeQueriedImages)
+  console.log(process.env.SOMETHING)
 
   return (
     <Layout>
