@@ -59,6 +59,7 @@ module.exports = {
         // Add any options here
       },
     },
-    `gatsby-plugin-sitemap`
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-transition-link`
   ],
 }
