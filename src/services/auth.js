@@ -1,9 +1,9 @@
 export const isBrowser = () => typeof window !== "undefined"
 
 export const getUser = () => {
-  const user = window.localStorage.getItem("gatsbyUser")
-  if (isBrowser() && user) {
-    return JSON.parse(user)
+  if (isBrowser()) {
+    const user = window.localStorage.getItem("gatsbyUser")
+    return user ? JSON.parse(user) : {}
   } else {
     return {}
   }
