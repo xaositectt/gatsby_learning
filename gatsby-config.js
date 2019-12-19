@@ -60,6 +60,13 @@ module.exports = {
       },
     },
     `gatsby-plugin-sitemap`,
-    `gatsby-plugin-transition-link`
+    `gatsby-plugin-transition-link`,
+    {
+      resolve: `gatsby-source-shopify`,
+      options: {
+        shopName: `whatevs-dude`,
+        accessToken: `5c76b5d0bb3775b2de714ee69a338d21`,
+      },
+    },
   ],
 }
