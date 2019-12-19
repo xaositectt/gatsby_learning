@@ -31,6 +31,7 @@ export default () => {
         <ListLink to="/">Home</ListLink>
         {/* <ListLink to="/app/profile">Profile</ListLink> */}
         <ListLink to="/about/">About</ListLink>
+        <ListLink to="/products/">Products</ListLink>
         <ListLink to="/contact/">Contact</ListLink>
         <ListLink to="/characters/">Characters</ListLink>
         <ListLink to="/">Profile</ListLink>
