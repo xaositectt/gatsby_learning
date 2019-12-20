@@ -38,13 +38,14 @@ const User = props => (
   </>
 )
 
-export default ({data}) => {
+export default ({data, location}) => {
   const smallQueriedImages = data.small_avatars.edges.map(node => node.node.childImageSharp.fluid)
   const largeQueriedImages = data.large_avatars.edges.map(node => node.node.childImageSharp.fluid)
 
-  console.log(smallQueriedImages)
-  console.log(largeQueriedImages)
-  console.log(process.env.SOMETHING)
+  console.log('the location data is: ', location)
+  // console.log(smallQueriedImages)
+  // console.log(largeQueriedImages)
+  // console.log(process.env.SOMETHING)
 
   return (
     <Layout>

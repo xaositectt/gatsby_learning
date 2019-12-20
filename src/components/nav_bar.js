@@ -4,7 +4,11 @@ import { getUser, isLoggedIn, logout } from "../services/auth"
 
 const ListLink = props => (
   <li style={{ display: `inline-block`, marginRight: `1rem` }}>
-    <Link to={props.to}>{props.children}</Link>
+    <Link
+      to={props.to}
+      activeStyle={{ color: "red" }}
+      state={{ what: true }}
+    >{props.children}</Link>
   </li>
 )
 
@@ -30,10 +34,10 @@ export default () => {
       <nav>
         <ListLink to="/">Home</ListLink>
         {/* <ListLink to="/app/profile">Profile</ListLink> */}
-        <ListLink to="/about/">About</ListLink>
-        <ListLink to="/products/">Products</ListLink>
+        <ListLink to="/about">About</ListLink>
         <ListLink to="/contact/">Contact</ListLink>
         <ListLink to="/characters/">Characters</ListLink>
+        <ListLink to="/router_test/">Testing dynamic routing</ListLink>
         <ListLink to="/">Profile</ListLink>
         {isLoggedIn() ? (
           <a

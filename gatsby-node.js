@@ -9,6 +9,13 @@ exports.onCreatePage = async ({page, actions}) => {
   //   // Update the page.
   //   createPage(page)
   // }
+
+  if (page.path.match(/^\/router_test/)) {
+    page.matchPath = "/router_test/*"
+
+    // Update the page.
+    createPage(page)
+  }
   const dogData = [
     {
       name: "Fido",
